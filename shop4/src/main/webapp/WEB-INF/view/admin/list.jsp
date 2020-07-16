@@ -11,6 +11,10 @@ function allchkbox(t) {
 	console.log(t);
 	$(".idchks").prop("checked", t.checked);
 }
+function graph_open(url) {
+	var op = "width=800, height=800, scrollbars=yes, left=50, top=150";
+	window.open(url+".shop", "graph", op);
+}
 </script>
 </head>
 <body>
@@ -42,7 +46,9 @@ function allchkbox(t) {
 </tr>
 </c:forEach>
 <tr>
-<td colspan="7"><input type="submit" value="메일보내기"></td>
+<td colspan="7"><input type="submit" value="메일보내기">
+<input type="button" value="그래프" onclick="graph_open('graph1')">
+</td>
 </tr>
 </table>
 </form>

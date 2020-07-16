@@ -5,5 +5,7 @@
 	</decorator>
 	<excludes>
 	<pattern>/board/imgupload*</pattern>
+	<pattern>/admin/graph*</pattern>
+	<pattern>/ajax/*</pattern>
 	</excludes>
 </decorators>

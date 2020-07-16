@@ -186,6 +186,13 @@ public class ShopService {
 		return map;
 	}
 
+	public Map<String, Object> graph2() {
+		Map <String, Object> map = new HashMap<String, Object>();
+		for(Map <String, Object> m : boardDao.graph2())
+			map.put((String) m.get("regdate"), m.get("cnt"));
+		return map;
+	}
+
 
 
 	

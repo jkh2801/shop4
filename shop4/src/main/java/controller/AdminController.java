@@ -154,10 +154,12 @@ public class AdminController {
 		return body;
 	}
 	
-	@RequestMapping("graph")
+	@RequestMapping("graph*")
 	public ModelAndView graph(HttpSession session) {
 		ModelAndView mav = new ModelAndView();
+		System.out.println();
 		Map <String, Object> map = service.graph1();
+		System.out.println(map);
 		mav.addObject("map", map);
 		return mav;
 	}

@@ -36,4 +36,10 @@ public interface BoardMapper {
 	@Delete("delete from board where num = #{num}")
 	void delete(Map<String, Object> param);
 
+	@Select("select name, count(*) cnt from board group by name order by cnt desc limit 0, 7")
+	List<Map<String, Object>> graph1();
+
+	@Select("select date_format(regdate, '%Y-%m-%d') regdate, count(*) cnt from board group by date_format(regdate, '%Y%m%d') order by regdate asc limit 0, 7 ")
+	List<Map<String, Object>> graph2();
+
 }

@@ -77,8 +77,12 @@ public class BoardDao {
 		template.getMapper(BoardMapper.class).delete(param);
 	}
 
-	public Object graph1() {
-		return null;
+	public List<Map<String, Object>> graph1() {
+		return template.getMapper(BoardMapper.class).graph1();
+	}
+
+	public List<Map<String, Object>> graph2() {
+		return template.getMapper(BoardMapper.class).graph2();
 	}
 
 	
